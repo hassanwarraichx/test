@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Acme Test Org — Contact Directory</title>
+</head>
+<body>
+
+  <h1>Acme Test Organization — Staff Directory</h1>
+  <p>This is a controlled test page for n8n email extraction testing. It is not a real organization.</p>
+
+  <h2>General Contacts</h2>
+  <ul>
+    <li>General inquiries: <a href="mailto:info@example.com">info@example.com</a></li>
+    <li>Support desk: <a href="mailto:support@example.com">support@example.com</a></li>
+    <li>Careers / HR: <a href="mailto:careers@example.com">careers@example.com</a></li>
+  </ul>
+
+  <h2>Department Contacts</h2>
+  <p>For engineering questions, reach out to eng-team@example.com or call the front desk.</p>
+  <p>Sales team can be reached at sales@example.com for pricing inquiries.</p>
+
+  <h2>Duplicate / Casing Test Cases</h2>
+  <p>Note: our support desk is also listed here as SUPPORT@EXAMPLE.COM (same as above, different casing) —
+     this line exists on purpose to test deduplication.</p>
+  <p>Plain-text repeat (no mailto link) of the info address: info@example.com</p>
+
+  <h2>Workflow Test Contact (Live Inbox)</h2>
+  <p>For automation testing purposes, the workflow coordinator can be reached at
+     <a href="mailto:muhammadhassanworke@gmail.com">muhammadhassanworke@gmail.com</a>.
+     Please do not send real marketing email to this address outside of controlled testing.
+  </p>
+
+  <h2>Invalid / Edge Cases (should be filtered out by validation)</h2>
+  <p>Broken address (missing domain): not-an-email@</p>
+  <p>Broken address (no @): justtext.example.com</p>
+  <p>Trailing punctuation test: reach us at admin@example.com, thanks!</p>
+
+</body>
+</html>
